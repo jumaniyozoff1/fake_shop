@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./product.js" defer></script>
+    <title>Product Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #001f3f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background-color: #fff5f5;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 100%;
+        max-width: 800px;
+      }
+      .card-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .product-image {
+        background-color: #4a5568;
+        padding: 20px;
+        
+      }
+      .product-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .product-info {
+        padding: 20px;
+      }
+      .product-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 5px 0;
+      }
+      .product-subtitle {
+        color: #718096;
+        margin: 0 0 15px 0;
+      }
+      .product-price {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0 0 15px 0;
+      }
+      .product-price .original-price {
+        color: #718096;
+        text-decoration: line-through;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+      .product-price .discount {
+        color: #48bb78;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+      .product-description {
+        margin-bottom: 20px;
+      }
+      .product-details {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .product-details p {
+        margin: 5px 0;
+      }
+      .product-details span {
+        font-weight: bold;
+      }
+      .taxes-info {
+        font-size: 12px;
+        color: #718096;
+        margin-top: 15px;
+      }
+      @media (min-width: 768px) {
+        .card-content {
+          flex-direction: row;
+        }
+        .product-image {
+          flex: 0 0 40%;
+        }
+        .product-info {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="card">
+      
+    </div>
+  </body>
+</html>
