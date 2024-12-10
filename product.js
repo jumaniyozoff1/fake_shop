@@ -1,13 +1,15 @@
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("productId");
+const loading = document.getElementById("loading");
 
-console.log(productId);
-
+loading.style.display = "block";
 const product = document.getElementById("card");
 
 axios
   .get(`https://fakestoreapi.com/products/${productId}`)
   .then((res) => {
+    console.log(res.data);
+
     product.innerHTML = `
      <div class="card-content">
         <div class="product-image">
@@ -35,8 +37,10 @@ axios
           
         </div>
       </div>
+      
 `;
+    loading.style.display = "none";
   })
   .catch((err) => {
-    console.log(err);
+    loading.style.display = "none";
   });

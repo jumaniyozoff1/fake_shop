@@ -15,6 +15,13 @@
         align-items: center;
         height: 100vh;
         margin: 0;
+        position: relative;
+      }
+      #loading {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        color: white;
       }
       .card {
         background-color: #fff5f5;
@@ -31,7 +38,6 @@
       .product-image {
         background-color: #4a5568;
         padding: 20px;
-        
       }
       .product-image img {
         width: 100%;
@@ -98,8 +104,7 @@
     </style>
   </head>
   <body>
-    <div class="card" id="card">
-      
-    </div>
+    <div class="card" id="card"></div>
+    <div id="loading">loading...</div>
   </body>
 </html>

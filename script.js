@@ -20,8 +20,6 @@ axios
     loading.style.display = "none";
   })
   .catch((err) => {
-    console.log(err);
-
     loading.style.display = "none";
     wrapper.innerHTML = `<p style="color: red;">Xatolik yuz berdi, ma'lumotni yuklab bo'lmadi.</p>`;
   });
